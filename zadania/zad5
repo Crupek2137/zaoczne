@@ -1,0 +1,19 @@
+Console.WriteLine("Sprawdzanie obecnosci tak/nie");
+
+int obecni = 0;
+
+for (int i = 1; i <= 5;)
+{
+    Console.WriteLine("czy pracownik " + i + " jest obecny");
+    string obecnosc = Console.ReadLine();
+    if (obecnosc == "tak")
+    {
+        obecni++;
+        i++;
+    }
+    else
+    {
+        i++;
+    }
+}
+Console.WriteLine("Obecnych jest " + obecni + " 
