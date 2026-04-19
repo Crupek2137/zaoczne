@@ -1,0 +1,12 @@
+Console.WriteLine("W ktorym roku się urodziles?");
+int rok  = int.Parse (Console.ReadLine());
+int wiek = 2026 - rok;
+Console.WriteLine("Masz " + wiek +" Lat");
+if(rok > 17)
+{
+    Console.WriteLine("Jestes pelnoletni");
+}
+else
+{
+    Console.WriteLine("Jestes niepelnoletni");
+}
