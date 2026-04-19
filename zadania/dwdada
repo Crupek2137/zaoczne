@@ -1,0 +1,22 @@
+using System;
+
+Console.WriteLine("Podaj login i haslo.");
+Console.WriteLine("login");
+string login = Console.ReadLine();
+Console.WriteLine("witaj " + login + " podaj haslo");
+string haslo = Console.ReadLine();
+int pruba = 1;
+while (pruba <= 3)
+    {
+        if (haslo.Length < 8 && haslo.Any(char.IsDigit)&& login.Length < 5)
+        {
+            Console.WriteLine("Dane nie poprwane sprubuj ponownie");
+            pruba++;
+        }
+        else
+        {
+            Console.WriteLine("Logowanie zakonczone sukcesem");
+        break;
+        }
+       
+    }
