@@ -1,0 +1,14 @@
+Console.WriteLine("Jaka jest temeratura?");
+double temp = double.Parse(Console.ReadLine());
+if (temp < 0)
+{
+    Console.WriteLine("Na zewnatrz jest mroz");
+}
+else if (temp > 0)
+{
+    Console.WriteLine("Na zewnatrz jest powyzej zera");
+}
+else
+{
+    Console.WriteLine("Temperatura wynosi zero stopni");
+}
