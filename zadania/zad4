@@ -1,0 +1,6 @@
+Console.WriteLine("Ile paczek prazygotowano?");
+int paczki = int.Parse (Console.ReadLine());
+for (int i = 1; i <= paczki; i++)
+{
+    Console.WriteLine("Przygotowano paczke nr " + i);
+}
