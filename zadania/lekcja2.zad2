@@ -1,0 +1,33 @@
+using System;
+
+int[] stan = { 12, 9, 22, 19, 17, 10, 20, 9, 10, 10 };
+int[] minimum = { 20, 20, 20, 20, 20, 20, 20, 20, 20, 20 };
+int[] cena = { 12, 47, 3, 89, 56, 22, 78, 5, 64, 91 };
+int suma = 0;
+int max = cena[0];
+int index_max = 0;
+int x = 0;
+
+for (int i = 0; i < stan.Length; i++)
+{
+    if (stan[i] < minimum[i])
+    {
+        x = minimum[i] - stan[i];
+        Console.WriteLine("trzeba zamowic lek " + i+ " za " + x * cena[i]+ " zlotych");
+        suma += x * cena[i];
+
+    }
+    else if (stan[i] >= minimum[i])
+    {
+        Console.WriteLine("jest wystarczajaco leku " + i);
+    }
+    if (x * cena[i] > max)
+    {
+        max = cena[i] * x;
+        index_max = i;
+    }
+
+}
+
+Console.WriteLine("Wszystko bedzie kosztowac " + suma + " zlotych. "+x+ " lekow bedzie w dostawie");
+Console.WriteLine("Najdrozszy koszt domowienia to lek nr " +index_max + " za "+ max + " zl ");
