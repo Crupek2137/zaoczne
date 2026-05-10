@@ -1,0 +1,104 @@
+using System;
+
+string[] nazwa = new string[100];
+nazwa[0] = "Akordeon";
+nazwa[1] = "Bajka";
+nazwa[2] = "Cukierki";
+nazwa[3] = "Mieszadło";
+int[] ilosc = new int[100];
+ilosc[0] = 14;
+ilosc[1] = 22;
+ilosc[2] = 13;
+ilosc[3] = 15;
+int[] cena = new int[100];
+cena[0] = 112;
+cena[1] = 200;
+cena[2] = 30;
+cena[3] = 30;
+int iloscproduktow = 3;
+int x = 0;
+int portfel = x;
+int wybur = 0;
+while (wybur != 4)
+{
+    Console.WriteLine("1. Kup produkt");
+    Console.WriteLine("2. Dodoaj produkt do magazynu");
+    Console.WriteLine("3. Wyswietl sume zakupow (portfel)");
+    Console.WriteLine("4. Wyjście");
+    int menu = int.Parse(Console.ReadLine());
+    if (menu == 1)
+    {
+        Console.WriteLine("Co chcesz kupic?");
+        string produkt = Console.ReadLine();
+        Console.WriteLine("ile");
+        int ile = int.Parse(Console.ReadLine());
+        bool czyistnieje = false;
+        for (int i = 0; i < iloscproduktow; i++)
+        {
+            if (nazwa[i] == produkt)
+            {
+                czyistnieje = true;
+
+                if (ilosc[i] >= ile)
+                {
+                    int koszt = ile * cena[i];
+                    ilosc[i] = ilosc[i] - ile;
+                    portfel += koszt;
+                    Console.WriteLine("zakupiono. " + " Całkowity koszt to " + koszt);
+                }
+                else
+                {
+                    Console.WriteLine("Brak tylu na stanie");
+                }
+
+
+            }
+        }
+        if (czyistnieje == false)
+        {
+            Console.WriteLine("nie ma takiego produktu");
+        }
+    }
+    else if (menu == 2)
+    {
+        Console.WriteLine("Co chcesz dodac");
+        string produkt = Console.ReadLine();
+        Console.WriteLine("ile");
+        int ile = int.Parse(Console.ReadLine());
+        Console.WriteLine("za ile");
+        int zaile = int.Parse(Console.ReadLine());
+        bool znaleziono = false;
+        for (int i = 0; i < iloscproduktow; i++)
+        {
+            if (nazwa[i] == produkt)
+            {
+
+                ilosc[i] += ile;
+                znaleziono = true;
+            }
+        }
+        if (znaleziono == false) 
+        {
+            nazwa[iloscproduktow] = produkt;
+            ilosc[iloscproduktow] = ile;
+            cena[iloscproduktow ] = zaile;
+
+            iloscproduktow++;
+
+            Console.WriteLine("dodano nowy produkt");
+        }
+    }
+    else if (menu == 3)
+    {
+        Console.WriteLine(portfel + "zl");
+    }
+    else if (menu == 4)
+    {
+        Console.WriteLine("pa pa");
+        break;
+    }
+    else
+    {
+        Console.WriteLine("niepoprawny wybor");
+    }
+}
