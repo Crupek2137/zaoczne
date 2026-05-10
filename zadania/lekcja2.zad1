@@ -1,13 +1,28 @@
 using System;
 
-int[] klienci = {12,9,39,19,17,10,42,9,10,10,15,19};
-int suma;
-foreach(int ilosc in klienci)
+int[] klienci = { 12, 9, 39, 19, 17, 10, 42, 9, 10, 10, 15, 19 };
+int suma =0;
+int max = klienci[0];
+int index_max = 0;
+foreach (int ilosc in klienci)
 {
     suma += ilosc;
 }
 Console.WriteLine("Wszystkich klientow bylo " + suma);
-for(int i = 0; i < klienci.Length; i++);
+for (int i = 0; i < klienci.Length; i++)
 {
-     
+if(klienci[i] > max)
+    {
+        max = klienci[i];
+        index_max = i;
+    }
+}
+Console.WriteLine("Maksymalnie bylo " + max + " klientow o " + index_max + " godzinie");
+
+for (int i = 0; i < klienci.Length; i++)
+{
+    if (klienci[i] > 20)
+    {
+        Console.WriteLine("W " + i + " godzinie potrzebna pomoc ");
+    }
 }
