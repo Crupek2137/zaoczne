@@ -1,0 +1,18 @@
+Random rand = new Random();
+int liczba = rand.Next(1, 101);
+int i = 3;
+do
+{
+    Console.WriteLine("Zgaduj liczbe od 1 do 100");
+    int numer = int.Parse(Console.ReadLine());
+    if (numer == liczba)
+    {
+        Console.WriteLine("Gratulacije to ta liczba");
+    }
+    else
+    {
+        i--;
+        Console.WriteLine("Zostaly " + i + " proby");
+    }
+}while (i > 0);
+Console.WriteLine("Liczba to "+ liczba);
