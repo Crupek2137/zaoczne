@@ -1,0 +1,18 @@
+Console.WriteLine("Podaj liczbe");
+int liczba = int.Parse(Console.ReadLine());
+for (int i = 2; i <= liczba; i++)
+{
+    bool pierwsza = true;
+
+for (int j = 2; j < i; j++)
+    {
+        if (i % j == 0)
+        {
+            pierwsza = false;
+        }
+    }
+    if (pierwsza == true)
+    {
+        Console.WriteLine(i);
+    }
+}
