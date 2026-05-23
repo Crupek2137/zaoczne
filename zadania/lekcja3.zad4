@@ -1,0 +1,11 @@
+using System;
+Console.WriteLine("Z czego silnia?");
+int liczba = int.Parse(Console.ReadLine());
+int suma = 1;
+int i = 1;
+do
+{
+    suma += (suma * i);
+    i++;
+}while(i < liczba);
+Console.WriteLine(suma);
