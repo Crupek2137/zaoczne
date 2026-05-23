@@ -1,0 +1,9 @@
+Console.WriteLine("Podaj bok 1");
+int liczba = int.Parse(Console.ReadLine());
+Console.WriteLine("Podaj bok 2");
+int liczba2 = int.Parse(Console.ReadLine());
+    for (int i = 1; i <= liczba; i++)
+    {
+        Console.WriteLine(new string('*', liczba2));
+    }
+
