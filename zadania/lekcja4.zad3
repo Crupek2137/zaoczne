@@ -1,0 +1,22 @@
+using System;
+using System.Collections.Generic;
+class Program
+{
+static void Main()
+{
+
+Dictionary string, string slownik = new Dictionary string, string ();
+slownik.Add("Hello", "Czesc");
+slownik.Add("dog","pies");
+slownik.Add("cat","kot");
+Console.WriteLine("Podaj slowo po angielsku: ");
+string slowo = Console.ReadLine();
+if(slownik.ContainsKey(slowo)){
+    Console.WriteLine("tlumaczenie: "slownik[slowo]);
+}
+else
+{
+    Console.WriteLine("Brak tlumaczenia");
+}
+}
+}
