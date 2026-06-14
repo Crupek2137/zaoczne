@@ -10,8 +10,10 @@ lista.Add("Mleko");
 lista.Add("Jajko");
 lista.Add("Ser");
 
-Console.WriteLine("1 Dodaj produkt do listy,  2 Wyswietl liste,  3 usun produkt z listy");
-int liczba = int.Parse (Console.ReadLine());
+while (true)
+{
+Console.WriteLine("1 Dodaj produkt do listy,  2 Wyswietl liste,  3 usun produkt z listy, 4 wyjscie");
+int liczba = int.Parse(Console.ReadLine());
 if(liczba == 2){
 Console.WriteLine("Lista zakupow:");
 foreach (var nr in lista)
@@ -30,10 +32,20 @@ else if(liczba == 3)
     Console.WriteLine("co chcesz usunac?");
 string produkt = Console.ReadLine();
 if(lista.Remove(produkt)){
-    console.Writeline("Usuniento produkt")
+    Console.WriteLine("Usuniento produkt");
 }
 else{
-console.Writeline("Nie ma takiego produktu")}
+console.WriteLine("Nie ma takiego produktu");
+}
+else if(liczba == 4)
+{
+    break;
+}
+ else
+            {
+                Console.WriteLine("Nieprawidlowa opcja, sprobuj ponownie.");
+            }
+}
 }
 }
 }
