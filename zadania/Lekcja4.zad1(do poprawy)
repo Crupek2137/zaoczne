@@ -1,0 +1,35 @@
+using System;
+using System.Collections.Generic;
+class Program
+{
+static void Main()
+{
+
+List<string> lista = new List<string>();
+lista.Add("Mleko");
+lista.Add("Jajko");
+lista.Add("Ser");
+
+Console.WriteLine("1 Dodaj produkt do listy,  2 Wyswietl liste,  3 usun produkt z listy");
+int liczba = int.Parse (Console.ReadLine());
+if(liczba = 2){
+Console.WriteLine("Lista zakupow:");
+foreach (var nr in lista)
+{
+Console.WriteLine(nr);
+}
+}
+else if(i = 1)
+{
+Console.WriteLine("co chcesz dodac?");
+string produkt = Console.ReadLine();
+lista.add(produkt);
+}
+else
+{
+    Console.WriteLine("co chcesz usunac?")
+string produkt = Console.ReadLine();
+lista.Remove(produkt);
+}
+}
+}
