@@ -11,16 +11,15 @@ class Program
 
             Console.WriteLine("Podaj zdanie");
             string zdanie = Console.ReadLine();
-            char[] znaki = { ',', ';', '|', ' ' };
-            string[] wyrazy = zdanie.Split(znaki, StringSplitOptions.RemoveEmptyEntries);
-            for(int i = 0; i < zdanie.Lenght; i++){
+            string[] wyrazy = zdanie.Split(" ");
+            foreach(string x in wyrazy ){
                 if (slowa.ContainsKey(nazwa))
                 {
                     slowa[nazwa] += 1;
                 }
                 else
                 {
-                    slowa[nazwa] = 1; 
+                    slowa.Add(nazwa, 1); 
                 }
                 Console.WriteLine($"Dodano slowo: {nazwa}, Ilosc: {ilosc}");
             }
