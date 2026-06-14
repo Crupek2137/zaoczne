@@ -1,0 +1,22 @@
+using System;
+using System.Collections.Generic;
+class Program
+{
+static void Main()
+{
+
+List<string> lista = new List<string>();
+
+for(i = 1; i > 5; i++){
+Console.WriteLine("Wpisz Liczbę")
+int liczba = int.Parse (Console.ReadLine());
+lista.Add(liczba)
+}
+foreach (var i in lista)
+{
+    if(i % 2 == 0){
+Console.WriteLine(i);
+}
+}
+}
+}
