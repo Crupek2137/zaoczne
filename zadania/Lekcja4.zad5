@@ -1,0 +1,54 @@
+using System;
+using System.Collections.Generic;
+
+class Program
+{
+    static void Main()
+    {
+        Dictionary<int, string> studenci = new Dictionary<int, string>();
+        
+        while (true)
+        {
+            Console.WriteLine("1. Dodaj studenta, 2. Wyswietl liste, 3. Usun studenta, 0. Wyjdz");
+            int liczba = int.Parse(Console.ReadLine());
+
+            if (liczba == 0)
+            {
+                break; 
+            }
+            else if (liczba == 1)
+            {
+                Console.WriteLine("Podaj ID studenta:");
+                int id = int.Parse(Console.ReadLine());
+                Console.WriteLine("Podaj imie studenta:");
+                string imie = Console.ReadLine();
+                studenci.Add(id, imie);
+            }
+            else if (liczba == 2)
+            {
+                Console.WriteLine("Lista studentow:");
+                foreach (var student in studenci)
+                {
+                    Console.WriteLine($"ID: {student.Key}, Imie: {student.Value}");
+                }
+            }
+            else if (liczba == 3);
+            {
+                Console.WriteLine("Podaj ID studenta do usuniecia:");
+                int id = int.Parse(Console.ReadLine());
+                if (studenci.Remove(id))
+                {
+                    Console.WriteLine("Usunieto studenta");
+                }
+                else
+                {
+                    Console.WriteLine("Nie ma studenta o takim ID");
+                }
+            }
+            else
+            {
+                Console.WriteLine("Nieprawidlowa opcja, sprobuj ponownie.");
+            }
+        }
+    }
+}
