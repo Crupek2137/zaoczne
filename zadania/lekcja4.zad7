@@ -1,0 +1,12 @@
+using System;
+
+class HelloWorld {
+    static void Main() {
+        var person = GetPersonData();
+        Console.WriteLine($"Imię: {person.name}, nr.tel: {person.telefon}");
+    }
+
+    static (string name, string telefon) GetPersonData() {
+        return ("Anna", "123-456-789");
+    }
+}
