@@ -1,0 +1,24 @@
+
+using System;
+using System.Collections.Generic;
+
+class HelloWorld {
+    static void Main() {
+        List<(string nazwa, double cena, int ilosc)> produkty = new List<(string, double, int)>
+        {
+            ("Bulka", 3.24, 12),
+            ("Mleko", 6.00, 24),
+            ("Ser", 12.30, 2),
+            ("Ajerkoniak", 19.99, 10),
+            ("Serek", 12.30, 2)
+        };
+
+        double wartoscMagazynu = 0;
+
+        foreach (var produkt in produkty) {
+            wartoscMagazynu += produkt.cena * produkt.ilosc;
+        }
+
+        Console.WriteLine($"Całkowita wartość magazynu: {wartoscMagazynu} zł");
+    }
+}
