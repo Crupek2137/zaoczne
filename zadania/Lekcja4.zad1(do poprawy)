@@ -25,11 +25,15 @@ Console.WriteLine("co chcesz dodac?");
 string produkt = Console.ReadLine();
 lista.Add(produkt);
 }
-else
+else if(liczba == 3)
 {
     Console.WriteLine("co chcesz usunac?");
 string produkt = Console.ReadLine();
-lista.Remove(produkt);
+if(lista.Remove(produkt)){
+    console.Writeline("Usuniento produkt")
+}
+else{
+console.Writeline("Nie ma takiego produktu")}
 }
 }
 }
