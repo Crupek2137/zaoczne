@@ -1,0 +1,93 @@
+using System;
+using System.Collections.Generic;
+
+class Program
+{
+    static void Main()
+    {
+        Dictionary<string, double> wydatki = new Dictionary<string, double>();
+
+        while (true)
+        {
+            Console.WriteLine("1. Dodaj wydatek");
+            Console.WriteLine("2. Wyświetl listę wydatków");
+            Console.WriteLine("3. Oblicz łączną kwotę wydatków");
+            Console.WriteLine("4. Znajdź największy wydatek");
+            Console.WriteLine("5. Wyjdź");
+
+            int liczba = int.Parse(Console.ReadLine());
+
+             if (liczba == 1)
+            {
+                Console.WriteLine("Podaj nazwę wydatku:");
+                string nazwa = Console.ReadLine();
+
+                Console.WriteLine("Podaj kwotę wydatku:");
+                double kwota = double.Parse(Console.ReadLine());
+
+                if (wydatki.ContainsKey(nazwa))
+                {
+                    wydatki[nazwa] += kwota;
+                }
+                else
+                {
+                    wydatki.Add(nazwa, kwota);
+                }
+
+                Console.WriteLine($"Dodano wydatek: {nazwa}, kwota: {kwota}");
+            }
+            else if (liczba == 2)
+            {
+                Console.WriteLine("Lista wydatków:");
+
+                foreach (var wydatek in wydatki)
+                {
+                    Console.WriteLine($"{wydatek.Key} - {wydatek.Value}");
+                }
+            }
+            else if (liczba == 3)
+            {
+                double suma = 0;
+
+                foreach (var wydatek in wydatki)
+                {
+                    suma += wydatek.Value;
+                }
+
+                Console.WriteLine($"Łączna kwota wydatków: {suma}");
+            }
+            else if (liczba == 4)
+            {
+                if (wydatki.Count == 0)
+                {
+                    Console.WriteLine("Brak wydatków.");
+                }
+                else
+                {
+                    string najwiekszyWydatek = "";
+                    double najwiekszaKwota = 0;
+
+                    foreach (var wydatek in wydatki)
+                    {
+                        if (wydatek.Value > najwiekszaKwota)
+                        {
+                            najwiekszaKwota = wydatek.Value;
+                            najwiekszyWydatek = wydatek.Key;
+                        }
+                    }
+
+                    Console.WriteLine($"Największy wydatek: {najwiekszyWydatek} - {najwiekszaKwota}");
+                }
+            }
+            else if (liczba == 5)
+            {
+                break;
+            }
+            else
+            {
+                Console.WriteLine("Nieprawidłowa opcja.");
+            }
+
+        }
+    }
+}
