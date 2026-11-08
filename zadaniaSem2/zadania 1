@@ -1,0 +1,122 @@
+using System;
+//ZADANIA Z PIERWSZEGO ARKUSZA
+
+//zadanie 1
+
+//Console.WriteLine("wpisz dwa boki prostokąta");
+//Console.WriteLine("Podaj bok 1");
+//int a = int.Parse(Console.ReadLine());
+//Console.WriteLine("Podaj bok 2");
+//int b = int.Parse(Console.ReadLine());
+//Console.WriteLine("Obwod = ");
+//Console.WriteLine(2 * a + 2 * b);
+//Console.WriteLine("Pole = ");
+//Console.WriteLine(a * b);
+
+//zadanie 2
+
+//Console.WriteLine("Suma n liczb");
+//Console.WriteLine("Podaj Ile kolejnych liczb chcesz dodać");
+//int n = int.Parse(Console.ReadLine());
+//int b = 1;
+//double c = 0;
+//for (int i = 1; i <= n; i++)
+//{
+
+//    c += b;
+//    b++;
+//    Console.WriteLine(c);
+
+//}
+
+//zadanie 5
+
+//Console.WriteLine("Podaj boki potencjalnego trojkata");
+//int a = int.Parse(Console.ReadLine());
+//int b = int.Parse(Console.ReadLine());
+//int c = int.Parse(Console.ReadLine());
+//if(a + b > c && a + c > b && b + c > a)
+//{
+//    Console.WriteLine("Z podanych boków można zbudować trójkąt");
+//}
+//else
+//{
+//    Console.WriteLine("Z podanych boków nie można zbudować trójkąta");
+//}
+
+//zadanie 7
+
+//int x = 1;
+//int y = ++x +1;
+//Console.WriteLine(y);
+//int x1 = 1;
+//int y1 = x1++ + 1;
+//Console.WriteLine(y1);
+
+
+//ZADANIA Z DRUGIEGO ARKUSZA
+
+//zadanie 1
+
+//Console.WriteLine("Podaj boki potencjalnego trojkata prostokatnego");
+//int a = int.Parse(Console.ReadLine());
+//int b = int.Parse(Console.ReadLine());
+//int c = int.Parse(Console.ReadLine());
+//if(a * a + b * b == c * c || a * a + c * c == b * b || b * b + c * c == a * a)
+//{
+//    Console.WriteLine("Z podanych boków można zbudować trójkąt prostokątny");
+//}
+//else
+//{
+//    Console.WriteLine("Z podanych boków nie można zbudować trójkąta prostokątnego");
+//}
+
+//zadanie 5
+
+//Console.WriteLine("Ile liczb w ciągu fibonacciego chcesz wyświetlić?");
+//int n = int.Parse(Console.ReadLine());
+//int a = 0, b = 1, c;
+//for (int i = 0; i < n; i++)
+//{
+//    c = a + b;
+//    Console.WriteLine(c);
+//    a = b;
+//    b = c;
+//}
+
+//zadanie 11
+
+//Console.WriteLine("Czy palindrom?");
+//string s = Console.ReadLine();
+//string s1 = s.Replace(" ", "").ToLower();
+//bool palindrom = true;
+//for (int i = 0; i < s1.Length / 2; i++)
+//{
+//    if (s1[i] != s1[s1.Length - 1 - i])
+//    {
+//        palindrom = false;
+//        break;
+//    }
+//}
+//if (palindrom)
+//{
+//    Console.WriteLine("Tak");
+//}
+//else
+//{
+//    Console.WriteLine("Nie");
+//}
+
+//zadanie 8
+
+//Console.WriteLine("Podaj liczby do sredniej");
+//int n = int.Parse(Console.ReadLine());
+//double suma = 0;
+//for (int i = 0; i < n; i++)
+//{
+//    Console.WriteLine("Podaj liczbe ", i + 1);
+//    double liczba = double.Parse(Console.ReadLine());
+//    suma += liczba;
+//}
+//double srednia = suma / n;
+//Console.WriteLine($"Srednia to: {srednia}");
